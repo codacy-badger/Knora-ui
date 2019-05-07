@@ -2,9 +2,12 @@
   <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Expert search
+        <span>Expert search</span>
+        <a class="gravsearch-doc-link" href="https://docs.knora.org/paradox/03-apis/api-v2/query-language.html" target="_blank">
+          <mat-icon>live_help</mat-icon>
+        </a>
       </mat-panel-title>
-      <mat-panel-description> </mat-panel-description>
+      <mat-panel-description></mat-panel-description>
     </mat-expansion-panel-header>
 
     <form [formGroup]="expertSearchForm" class="expert-search-form form-content">
