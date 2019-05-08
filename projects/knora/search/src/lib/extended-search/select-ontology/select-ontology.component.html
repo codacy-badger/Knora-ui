@@ -1,5 +1,5 @@
-<mat-form-field *ngIf="ontologies.length > 0">
+<mat-form-field *ngIf="ontologies.length > 0" class="select-ontology-field">
   <mat-select placeholder="Ontology" [formControl]="form.controls['ontology']">
-      <mat-option *ngFor="let onto of ontologies" [value]="onto.id">{{ onto.label }}</mat-option>
+    <mat-option *ngFor="let onto of ontologies" [value]="onto.id">{{ onto.label }}</mat-option>
   </mat-select>
 </mat-form-field>

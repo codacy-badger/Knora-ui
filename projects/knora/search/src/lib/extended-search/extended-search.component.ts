@@ -107,8 +107,9 @@ export class ExtendedSearchComponent implements OnInit {
      * Remove the last property from the search form.
      * @returns void
      */
-    removeProperty(): void {
-        this.activeProperties.splice(-1, 1);
+    removeProperty(index): void {
+        this.activeProperties.slice(index, 1);
+        console.log('this.activeProperties', this.activeProperties);
     }
 
     /**

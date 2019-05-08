@@ -1,4 +1,4 @@
-<mat-form-field *ngIf="resourceClasses.length > 0">
+<mat-form-field *ngIf="resourceClasses.length > 0" class="select-resource-field">
   <mat-select placeholder="Resource Class" [formControl]="form.controls['resourceClass']">
     <mat-option [value]="null">no selection</mat-option>
     <!-- undo selection of a resource class -->

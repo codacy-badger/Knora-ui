@@ -8,15 +8,34 @@
     margin-right: 5px;
 }
 .property-buttons {
-    margin-top: 25px;
+    margin-bottom: 10px;
 }
-.select-property {
+/* .select-property {
     margin-left: 22px;
-}
-.select-resource-class {
+} */
+/* .select-resource-class {
     margin-left: 12px;
-}
+} */
 
 .action-panel {
     display: flex;
+}
+
+.remove-property-button {
+    margin-left: 24px;
+    width: 20px;
+    height: 20px;
+    line-height: 14px;
+    font-size: 14px;
+
+    &::ng-deep .mat-button-wrapper{
+        line-height: 14px;
+        padding: 0;
+
+         .mat-icon {
+             font-size: 14px;
+             padding-right: 4px;
+             padding-top: 4px;
+         }
+   }
 }

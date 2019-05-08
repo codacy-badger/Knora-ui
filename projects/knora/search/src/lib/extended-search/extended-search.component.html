@@ -12,19 +12,20 @@
     <div *ngFor="let prop of activeProperties; let i = index">
 
       <kui-select-property #property [activeResourceClass]="activeResourceClass" [formGroup]="form" [index]="i" [properties]="properties"></kui-select-property>
-
+      <button mat-mini-fab class="property-buttons remove-property-button" color="primary" type="button" (click)="removeProperty(i)">
+        <mat-icon aria-label="remove property">clear</mat-icon>
+      </button>
     </div>
   </div>
 
-
-  <div>
-    <button mat-mini-fab class="property-buttons add-property-button" color="primary" type="button" (click)="addProperty()" [disabled]="activeOntology === undefined || activeProperties.length >= 4">
-      <mat-icon aria-label="add a property">add</mat-icon>
+  <div *ngIf="properties !== undefined">
+    <button mat-stroked-button class="property-buttons add-property-button" color="primary" type="button" (click)="addProperty()" [disabled]="activeOntology === undefined || activeProperties.length >= 4">
+      <mat-icon aria-label="add a property">add</mat-icon>Property
     </button>
 
-    <button mat-mini-fab class="property-buttons remove-property-button" color="primary" type="button" (click)="removeProperty()" [disabled]="activeProperties.length == 0">
+    <!--  <button mat-mini-fab class="property-buttons remove-property-button" color="primary" type="button" (click)="removeProperty()" [disabled]="activeProperties.length == 0">
       <mat-icon aria-label="remove property">remove</mat-icon>
-    </button>
+    </button> -->
   </div>
 
   <!--  <div>
